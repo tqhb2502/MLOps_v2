@@ -6,11 +6,13 @@ on:
       - main           # Chạy trên nhánh `main`
       - init_tests     # Chạy trên nhánh `init_tests`
       - van
+      - training_loging
   pull_request:        # Kích hoạt khi tạo pull request
     branches:
       - main           # Kích hoạt khi tạo pull request vào nhánh `main`
       - init_tests
       - van
+      - training_loging
 jobs:
   test:
     runs-on: ubuntu-latest   # Chạy trên môi trường Ubuntu
@@ -36,7 +38,7 @@ jobs:
       - name: Run tests
         run: |
           pytest tests/test_model.py
-          
+
       # Bước 5: Kiểm tra huấn luyện
       - name: Check training script
         run: |
