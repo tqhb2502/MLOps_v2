@@ -20,20 +20,20 @@ class ColectDataRequest(BaseModel):
 
 # Hàm tải mô hình đã huấn luyện
 
-# def load_model():
-#     model_path = "D:/VsCode/projectMLOp/MLOps_v2/saved_model/model.pkl"  # Đường dẫn đến mô hình đã huấn luyện
-#     with open(model_path, "rb") as model_file:
-#         return pickle.load(model_file)
+def load_model():
+    model_path = "D:/VsCode/projectMLOp/MLOps_v2/saved_model/model.pkl"  # Đường dẫn đến mô hình đã huấn luyện
+    with open(model_path, "rb") as model_file:
+        return pickle.load(model_file)
 
 # # Tải mô hình khi ứng dụng khởi động
-# model = load_model()
+model = load_model()
 
 # Hàm dự đoán lương dựa trên mô hình
 def predict_salary(experience_years: int) -> str:
     # Dự đoán sử dụng mô hình
-    # predicted_salary = model.predict([[experience_years]])[0]  # Giả sử mô hình yêu cầu dữ liệu dưới dạng mảng 2D
-    # return f"{predicted_salary} VND"
-    return 0
+    predicted_salary = model.predict([[experience_years]])[0]  # Giả sử mô hình yêu cầu dữ liệu dưới dạng mảng 2D
+    return f"{predicted_salary} VND"
+    
 
 # Hàm thu thập dữ liệu và lưu vào CSV
 def save_to_csv_and_dvc(experience_years: int, predicted_salary: str):
