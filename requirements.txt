@@ -2,6 +2,12 @@ numpy
 pandas
 matplotlib
 scikit-learn
+fastapi
+uvicorn
+requests
+streamlit
+dvc
+dvc[gdrive]
 pytest
 transformers
 pyyaml
