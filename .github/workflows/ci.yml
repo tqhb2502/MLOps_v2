@@ -36,3 +36,15 @@ jobs:
       - name: Run tests
         run: |
           pytest tests/test_model.py
+          
+      # Bước 5: Kiểm tra huấn luyện
+      - name: Check training script
+        run: |
+          python train.py
+
+      # Bước 6: Upload training log
+      - name: Upload training log
+        uses: actions/upload-artifact@v2
+        with:
+          name: training-log
+          path: train_log.txt
