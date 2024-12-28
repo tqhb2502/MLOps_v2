@@ -1,3 +1,6 @@
 mlops_v2_venv
-saved_model
 venv
+saved_model
+src/__pycache__
+logs
+h9art
