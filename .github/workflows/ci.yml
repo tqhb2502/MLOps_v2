@@ -3,12 +3,12 @@ name: Python CI
 on:
   push:                # Kích hoạt khi có lệnh `git push`
     branches:
-      - main           # Chạy trên nhánh `main`
+      - master           # Chạy trên nhánh `main`
       - init_tests     # Chạy trên nhánh `init_tests`
       - van
   pull_request:        # Kích hoạt khi tạo pull request
     branches:
-      - main           # Kích hoạt khi tạo pull request vào nhánh `main`
+      - master           # Kích hoạt khi tạo pull request vào nhánh `main`
       - init_tests
       - van
 jobs:
