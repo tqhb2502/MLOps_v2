@@ -5,10 +5,12 @@ on:
     branches:
       - main           # Chạy trên nhánh `main`
       - init_tests     # Chạy trên nhánh `init_tests`
+      - van
   pull_request:        # Kích hoạt khi tạo pull request
     branches:
       - main           # Kích hoạt khi tạo pull request vào nhánh `main`
-
+      - init_tests
+      - van
 jobs:
   test:
     runs-on: ubuntu-latest   # Chạy trên môi trường Ubuntu
