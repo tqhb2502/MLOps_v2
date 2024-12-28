@@ -1,0 +1,17 @@
+system:
+  random-state: 0
+
+data:
+  data-dir: "data"
+  source: "Salary_Data.csv"
+  train-ratio: 3
+  test-ratio: 1
+
+model:
+  model-dir: "saved_model"
+  model-name: "model.pkl"
+  save-protocol: 5
+
+message:
+  model-loaded: "Model loaded successfully!"
+  new-model: "Create new model!"
