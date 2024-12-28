@@ -1,5 +1,7 @@
 system:
   random-state: 0
+  huggingface-token: "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"
+  huggingface-repo: "h9art/MLOps_toy_model"
 
 data:
   data-dir: "data"
@@ -15,3 +17,8 @@ model:
 message:
   model-loaded: "Model loaded successfully!"
   new-model: "Create new model!"
+  huggingface-commit: "Upload model"
+  huggingface-pushed: "Model pushed to https://huggingface.co/"
+
+log:
+  log-dir: "logs"

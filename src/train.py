@@ -7,6 +7,7 @@ import pickle
 import os
 
 from config import DATA_CONFIG, SYSTEM_CONFIG, MODEL_CONFIG, MSG_CONFIG
+from evaluate import evaluate_model
 
 # Lấy config
 DATA_SOURCE = DATA_CONFIG['source']
@@ -55,18 +56,4 @@ with open(file_path, "wb") as f:
     pickle.dump(regressor, f, protocol=SAVE_PROTOCOL)
 
 # Test & Ghi log
-y_pred = regressor.predict(X_test)
-
-plt.scatter(X_train, y_train, color = 'red')
-plt.plot(X_train, regressor.predict(X_train), color = 'blue')
-plt.title('Salary vs Experience (Training Set)')
-plt.xlabel('Years of Experience')
-plt.ylabel('Salary')
-plt.show()
-
-plt.scatter(X_test, y_test, color = 'red')
-plt.plot(X_train, regressor.predict(X_train), color = 'blue')
-plt.title('Salary vs Experience (Test Set)')
-plt.xlabel('Years of Experience')
-plt.ylabel('Salary')
-plt.show()
+evaluate_model(regressor, X_train, y_train, X_test, y_test)
