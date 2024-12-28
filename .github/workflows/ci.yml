@@ -3,11 +3,12 @@ name: Python CI
 on:
   push:                # Kích hoạt khi có lệnh `git push`
     branches:
-      - main     
-      - init_tests      # Chạy trên nhánh `main`
+      - main           # Chạy trên nhánh `main`
+      - init_tests     # Chạy trên nhánh `init_tests`
   pull_request:        # Kích hoạt khi tạo pull request
-      - main
-      - init_tests
+    branches:
+      - main           # Kích hoạt khi tạo pull request vào nhánh `main`
+
 jobs:
   test:
     runs-on: ubuntu-latest   # Chạy trên môi trường Ubuntu
