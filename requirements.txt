@@ -2,5 +2,7 @@ numpy
 pandas
 matplotlib
 scikit-learn
+pytest
+transformers
 pyyaml
 huggingface_hub
