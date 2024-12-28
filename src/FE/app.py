@@ -49,7 +49,7 @@ if st.button("Dự đoán lương"):
 
 # Hiển thị kết quả dự đoán lương
 if "predicted_salary" in st.session_state:
-    st.text_area("Kết quả dự đoán lương", st.session_state.predicted_salary, height=50, disabled=True)
+    st.text_area("Kết quả dự đoán lương", st.session_state.predicted_salary, height=68, disabled=True)
 
 # Nút Like và thu thập dữ liệu
 if st.button("👍 Like", disabled=st.session_state.liked):

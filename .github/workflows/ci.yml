@@ -6,11 +6,14 @@ on:
       - master           # Chạy trên nhánh `main`
       - init_tests     # Chạy trên nhánh `init_tests`
       - van
+      - retrain
   pull_request:        # Kích hoạt khi tạo pull request
     branches:
       - master           # Kích hoạt khi tạo pull request vào nhánh `main`
       - init_tests
       - van
+      - retrain
+
 jobs:
   test:
     runs-on: ubuntu-latest   # Chạy trên môi trường Ubuntu

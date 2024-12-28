@@ -25,6 +25,7 @@ MODEL_LOADED = MSG_CONFIG['model-loaded']
 NEW_MODEL = MSG_CONFIG['new-model']
 
 dataset = pd.read_csv(os.path.join(DATA_DIR, DATA_SOURCE))
+print(dataset)
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
