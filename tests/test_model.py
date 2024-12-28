@@ -1,7 +1,5 @@
 import pytest
 import joblib
-import numpy as np
-from transformers import AutoModelForSequenceClassification
 from huggingface_hub import hf_hub_download
 
 
@@ -16,26 +14,20 @@ def model():
     model = joblib.load(model_path)
     return model
 
-# Tải mô hình đã lưu
-# model_path = r'C:\Users\ASUS\Desktop\ML_OP\MLOps_v2\saved_model\model.pkl'  
-
-# @pytest.fixture
-# def model():
-#     """Fixture để tải mô hình"""
-#     return joblib.load(model_path)
 
 def test_model_prediction(model):
     """Kiểm tra dự đoán của mô hình"""
     # Ví dụ: Kiểm tra với 3 năm kinh nghiệm
-    years_of_experience = np.array([[3]])  # 3 năm kinh nghiệm, format cho mô hình dự đoán
+    years_of_experience = [[3]]  # Dữ liệu đầu vào dưới dạng danh sách lồng nhau
     predicted_salary = model.predict(years_of_experience)
 
     # Kiểm tra kết quả dự đoán (Giả sử mô hình có dự đoán một mức lương cụ thể cho 3 năm)
     assert predicted_salary[0] > 0, f"Dự đoán lương không hợp lệ: {predicted_salary[0]}"
 
+
 def test_model_with_multiple_inputs(model):
     """Kiểm tra với nhiều giá trị đầu vào"""
-    years_of_experience = np.array([[1], [5], [10]])  # 3 giá trị đầu vào
+    years_of_experience = [[1], [5], [10]]  # Dữ liệu đầu vào dưới dạng danh sách lồng nhau
     predicted_salaries = model.predict(years_of_experience)
     
     assert len(predicted_salaries) == 3, f"Số lượng dự đoán không đúng: {len(predicted_salaries)}"
