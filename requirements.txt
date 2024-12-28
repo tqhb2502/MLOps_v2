@@ -12,3 +12,4 @@ pytest
 transformers
 pyyaml
 huggingface_hub
+joblib
