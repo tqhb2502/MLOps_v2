@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Tải mô hình đã lưu
-model_path = 'saved_model/model.pkl'
+model_path = '../saved_models/model.pkl'  # Đường dẫn đúng
 
 @pytest.fixture
 def model():
