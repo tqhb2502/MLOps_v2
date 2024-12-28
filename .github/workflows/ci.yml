@@ -5,9 +5,14 @@ on:
     branches:
       - main
       - init_tests
+      - van
+      - training_loging
   pull_request:
     branches:
       - main
+      - init_tests
+      - van
+      - training_loging
 
 jobs:
   test-and-train:
