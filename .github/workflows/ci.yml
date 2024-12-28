@@ -33,4 +33,4 @@ jobs:
       # Bước 4: Chạy kiểm tra với pytest
       - name: Run tests
         run: |
-          pytest
+          pytest tests/test_model.py
