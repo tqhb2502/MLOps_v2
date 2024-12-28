@@ -8,3 +8,7 @@ requests
 streamlit
 dvc
 dvc[gdrive]
+pytest
+transformers
+pyyaml
+huggingface_hub
