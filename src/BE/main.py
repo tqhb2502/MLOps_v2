@@ -42,7 +42,7 @@ if not os.path.exists("../../saved_model"):
     repo = Repository(
         local_dir="../../saved_model",
         clone_from="h9art/MLOps_toy_model",
-        use_auth_token="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"
+        use_auth_token=""
     )
     print("Clone thành công!")
 else:
@@ -170,7 +170,7 @@ def push_model_to_huggingface(namemodel:str):
     repo = Repository(
         local_dir=repo_local_dir, 
         clone_from="h9art/MLOps_toy_model", 
-        use_auth_token="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"
+        use_auth_token=""
     )
     
     # Xóa model cũ trong repo (nếu có)

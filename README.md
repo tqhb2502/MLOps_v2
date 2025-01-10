@@ -9,3 +9,5 @@ Hệ thống dự đoán lương dựa trên kinh nghiệm làm việc trong ng�
 `cd MLOps_v2`
 - Tiến hành huấn luyện mô hình:
 `python src/train.py`
+## Chú ý
+- Thêm HuggingFace write token vào `config.yaml` và `src/BE/main.py`

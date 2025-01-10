@@ -1,6 +1,6 @@
 system:
   random-state: 0
-  huggingface-token: "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"
+  huggingface-token: ""
   huggingface-repo: "h9art/MLOps_toy_model"
 
 data:
